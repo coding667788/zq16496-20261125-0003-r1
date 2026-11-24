@@ -1,0 +1,80 @@
+{
+  "schema": "vaultdrill.case.v1",
+  "id": "fourteen-workset-drill",
+  "snapshot_dir": "snapshots",
+  "rule_version_strategy": "source",
+  "default_read_groups": ["grp-drill-readers"],
+  "window": {
+    "id": "night-2026-12-08",
+    "start": "2026-12-08T02:30:00Z",
+    "end": "2026-12-08T04:30:00Z"
+  },
+  "nodes": [
+    {"id": "node-1", "regions": ["cn-north", "cn-south"]},
+    {"id": "node-2", "regions": ["cn-north", "cn-south"]},
+    {"id": "node-3", "regions": ["cn-north", "cn-south"]},
+    {"id": "node-4", "regions": ["cn-north"]},
+    {"id": "node-5", "regions": ["cn-north"]},
+    {"id": "node-6", "regions": ["cn-north"]},
+    {"id": "node-big", "regions": ["cn-north"]},
+    {"id": "node-cheap", "regions": ["cn-north"]},
+    {"id": "node-misregion", "regions": ["cn-north", "cn-south"]}
+  ],
+  "access_rules": {
+    "versions": {
+      "rv-rec-v1": {
+        "default_object_policy": {
+          "allowed_groups": ["grp-drill-readers"],
+          "sealed": false,
+          "permission_window": {
+            "start": "2026-12-08T02:00:00Z",
+            "end": "2026-12-08T05:00:00Z"
+          }
+        },
+        "objects": {
+          "obj-sealed-1": {"allowed_groups": [], "sealed": true},
+          "obj-sealed-2": {"allowed_groups": [], "sealed": true}
+        }
+      }
+    }
+  },
+  "work_sets": [
+    {"id": "WS01", "objects": ["obj-01", "obj-02"]},
+    {"id": "WS02", "objects": ["obj-03"]},
+    {"id": "WS03", "objects": ["obj-04", "obj-05"]},
+    {"id": "WS04", "objects": ["obj-06"]},
+    {"id": "WS05", "objects": ["obj-07", "obj-08"]},
+    {"id": "WS06", "objects": ["obj-09"]},
+    {"id": "WS07", "objects": ["obj-10", "obj-11"]},
+    {"id": "WS08", "objects": ["obj-12"]},
+    {"id": "WS09", "objects": ["obj-13", "obj-14"]},
+    {"id": "WS10", "objects": ["obj-15"]},
+    {"id": "WS11", "objects": ["obj-16", "obj-17"]},
+    {"id": "WS12", "objects": ["obj-18"]},
+    {"id": "WS13", "objects": ["obj-19"]},
+    {"id": "WS14", "objects": ["obj-20"]}
+  ],
+  "candidate_actions": [
+    {"id": "A01", "snapshot": "rec-safe", "node": "node-1", "region": "cn-north", "downtime_minutes": 14, "work_sets": ["WS01", "WS02"]},
+    {"id": "A02", "snapshot": "rec-safe", "node": "node-1", "region": "cn-south", "downtime_minutes": 9, "work_sets": ["WS03", "WS04"]},
+    {"id": "A03", "snapshot": "rec-safe", "node": "node-2", "region": "cn-north", "downtime_minutes": 14, "work_sets": ["WS05", "WS06"]},
+    {"id": "A04", "snapshot": "rec-safe", "node": "node-2", "region": "cn-south", "downtime_minutes": 9, "work_sets": ["WS07", "WS08"]},
+    {"id": "A05", "snapshot": "rec-safe", "node": "node-3", "region": "cn-north", "downtime_minutes": 14, "work_sets": ["WS09", "WS10"]},
+    {"id": "A06", "snapshot": "rec-safe", "node": "node-3", "region": "cn-south", "downtime_minutes": 9, "work_sets": ["WS11", "WS12"]},
+    {"id": "A07", "snapshot": "rec-safe", "node": "node-1", "region": "cn-north", "downtime_minutes": 14, "work_sets": ["WS13", "WS14"]},
+
+    {"id": "A08", "snapshot": "rec-safe", "node": "node-1", "region": "cn-north", "downtime_minutes": 24, "work_sets": ["WS01", "WS02", "WS03", "WS04"]},
+    {"id": "A09", "snapshot": "rec-safe", "node": "node-2", "region": "cn-north", "downtime_minutes": 24, "work_sets": ["WS05", "WS06", "WS07", "WS08"]},
+    {"id": "A10", "snapshot": "rec-safe", "node": "node-3", "region": "cn-north", "downtime_minutes": 24, "work_sets": ["WS09", "WS10", "WS11", "WS12"]},
+    {"id": "A11", "snapshot": "rec-safe", "node": "node-1", "region": "cn-north", "downtime_minutes": 12, "work_sets": ["WS13", "WS14"]},
+
+    {"id": "A12", "snapshot": "rec-safe", "node": "node-4", "region": "cn-north", "downtime_minutes": 12, "work_sets": ["WS01", "WS02"]},
+    {"id": "A13", "snapshot": "rec-safe", "node": "node-4", "region": "cn-north", "downtime_minutes": 12, "work_sets": ["WS03", "WS04"]},
+    {"id": "A14", "snapshot": "rec-safe", "node": "node-5", "region": "cn-north", "downtime_minutes": 40, "work_sets": ["WS05", "WS06", "WS07", "WS08", "WS09", "WS10", "WS11", "WS12"]},
+    {"id": "A15", "snapshot": "rec-safe", "node": "node-6", "region": "cn-north", "downtime_minutes": 70, "work_sets": ["WS01", "WS02", "WS03", "WS04", "WS05", "WS06", "WS07", "WS08"]},
+    {"id": "A16", "snapshot": "rec-safe", "node": "node-big", "region": "cn-north", "downtime_minutes": 150, "work_sets": ["WS01", "WS02", "WS03", "WS04", "WS05", "WS06", "WS07", "WS08", "WS09", "WS10", "WS11", "WS12", "WS13", "WS14"]},
+
+    {"id": "A17", "snapshot": "rec-full", "node": "node-cheap", "region": "cn-north", "downtime_minutes": 5, "work_sets": ["WS01", "WS02", "WS03", "WS04", "WS05", "WS06", "WS07", "WS08", "WS09", "WS10", "WS11", "WS12", "WS13", "WS14"]},
+    {"id": "A18", "snapshot": "rec-south-only-safe", "node": "node-misregion", "region": "cn-north", "downtime_minutes": 6, "work_sets": ["WS13", "WS14"]}
+  ]
+}

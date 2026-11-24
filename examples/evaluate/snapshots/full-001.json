@@ -1,0 +1,19 @@
+{
+  "id": "full-001",
+  "parent": null,
+  "kind": "full",
+  "access_rule_version": "rv-2026-10",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east", "cn-south"],
+  "objects": {
+    "obj-rename": {"name": "ledger-q3.csv", "digest": "sha256:rename-v1"},
+    "obj-readd": {"name": "dr-runbook-v1.docx", "digest": "sha256:readd-v1"},
+    "obj-masked": {"name": "人员名册-v1.csv", "digest": "sha256:masked-v1"},
+    "obj-window-a": {"name": "regional-a.bin", "digest": "sha256:window-a-v1"},
+    "obj-window-b": {"name": "regional-b.bin", "digest": "sha256:window-b-v1"},
+    "obj-auth": {"name": "exec-comp.csv", "digest": "sha256:auth-v1"},
+    "obj-sealed": {"name": "legal-hold-index.json", "digest": "sha256:sealed-v1"},
+    "obj-region": {"name": "south-logs.ndjson", "digest": "sha256:region-v1"}
+  },
+  "delete_markers": []
+}

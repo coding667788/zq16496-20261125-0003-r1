@@ -1,0 +1,33 @@
+{
+  "id": "rec-full",
+  "parent": null,
+  "kind": "full",
+  "access_rule_version": "rv-rec-v1",
+  "recovery_window": {"start": "2026-12-08T00:00:00Z", "end": "2026-12-09T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east", "cn-south"],
+  "objects": {
+    "obj-01": {"name": "ws01-a.bin", "digest": "sha256:obj-01-v1"},
+    "obj-02": {"name": "ws01-b.bin", "digest": "sha256:obj-02-v1"},
+    "obj-03": {"name": "ws02.bin", "digest": "sha256:obj-03-v1"},
+    "obj-04": {"name": "ws03-a.bin", "digest": "sha256:obj-04-v1"},
+    "obj-05": {"name": "ws03-b.bin", "digest": "sha256:obj-05-v1"},
+    "obj-06": {"name": "ws04.bin", "digest": "sha256:obj-06-v1"},
+    "obj-07": {"name": "ws05-a.bin", "digest": "sha256:obj-07-v1"},
+    "obj-08": {"name": "ws05-b.bin", "digest": "sha256:obj-08-v1"},
+    "obj-09": {"name": "ws06.bin", "digest": "sha256:obj-09-v1"},
+    "obj-10": {"name": "ws07-a.bin", "digest": "sha256:obj-10-v1"},
+    "obj-11": {"name": "ws07-b.bin", "digest": "sha256:obj-11-v1"},
+    "obj-12": {"name": "ws08.bin", "digest": "sha256:obj-12-v1"},
+    "obj-13": {"name": "ws09-a.bin", "digest": "sha256:obj-13-v1"},
+    "obj-14": {"name": "ws09-b.bin", "digest": "sha256:obj-14-v1"},
+    "obj-15": {"name": "ws10.bin", "digest": "sha256:obj-15-v1"},
+    "obj-16": {"name": "ws11-a.bin", "digest": "sha256:obj-16-v1"},
+    "obj-17": {"name": "ws11-b.bin", "digest": "sha256:obj-17-v1"},
+    "obj-18": {"name": "ws12.bin", "digest": "sha256:obj-18-v1"},
+    "obj-19": {"name": "ws13.bin", "digest": "sha256:obj-19-v1"},
+    "obj-20": {"name": "ws14.bin", "digest": "sha256:obj-20-v1"},
+    "obj-sealed-1": {"name": "sealed-grand-jury-index.json", "digest": "sha256:sealed-1"},
+    "obj-sealed-2": {"name": "sealed-identity-map.enc", "digest": "sha256:sealed-2"}
+  },
+  "delete_markers": []
+}

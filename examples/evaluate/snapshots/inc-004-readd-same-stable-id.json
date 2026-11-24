@@ -1,0 +1,12 @@
+{
+  "id": "inc-004-readd-same-stable-id",
+  "parent": "inc-003-parent-table-delete",
+  "kind": "incremental",
+  "access_rule_version": "rv-2026-11",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east", "cn-south"],
+  "objects": {
+    "obj-readd": {"name": "dr-runbook-v2-readded-after-delete.docx", "digest": "sha256:readd-v2"}
+  },
+  "delete_markers": []
+}

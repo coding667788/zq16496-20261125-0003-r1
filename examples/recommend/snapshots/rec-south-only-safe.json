@@ -1,0 +1,10 @@
+{
+  "id": "rec-south-only-safe",
+  "parent": "rec-safe",
+  "kind": "incremental",
+  "access_rule_version": "rv-rec-v1",
+  "recovery_window": {"start": "2026-12-08T00:00:00Z", "end": "2026-12-09T00:00:00Z"},
+  "accessible_regions": ["cn-south"],
+  "objects": {},
+  "delete_markers": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "inc-south-only-safe",
+  "parent": "inc-005-latest",
+  "kind": "incremental",
+  "access_rule_version": "rv-2026-11",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-south"],
+  "objects": {},
+  "delete_markers": []
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vaultdrill"
+version = "1.0.0"
+description = "Offline immutable snapshot-chain recovery and sealed-data exposure drill"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+vaultdrill = "vaultdrill.cli:main"
+
+[tool.setuptools]
+packages = ["vaultdrill"]

@@ -1,0 +1,10 @@
+{
+  "id": "inc-leaky-brings-sealed",
+  "parent": "full-001",
+  "kind": "incremental",
+  "access_rule_version": "rv-2026-11",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east"],
+  "objects": {},
+  "delete_markers": []
+}

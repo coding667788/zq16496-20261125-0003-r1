@@ -1,0 +1,13 @@
+{
+  "id": "inc-005-latest",
+  "parent": "inc-004-readd-same-stable-id",
+  "kind": "incremental",
+  "access_rule_version": "rv-2026-11",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east", "cn-south"],
+  "objects": {},
+  "delete_markers": [
+    {"id": "obj-masked", "reason": "delete marker must mask full-001 copy"},
+    {"id": "obj-sealed", "reason": "sealed index removed from the safe materialization"}
+  ]
+}

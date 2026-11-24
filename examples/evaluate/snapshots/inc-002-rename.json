@@ -1,0 +1,12 @@
+{
+  "id": "inc-002-rename",
+  "parent": "full-001",
+  "kind": "incremental",
+  "access_rule_version": "rv-2026-11",
+  "recovery_window": {"start": "2026-12-01T00:00:00Z", "end": "2026-12-31T00:00:00Z"},
+  "accessible_regions": ["cn-north", "cn-east", "cn-south"],
+  "objects": {
+    "obj-rename": {"name": "ledger-q3-final.csv", "digest": "sha256:rename-v2"}
+  },
+  "delete_markers": []
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "vaultdrill.plan.v1",
+  "id": "plan-edge-demo",
+  "at": "2026-12-07T02:30:00Z",
+  "window": {"id": "eval-window"},
+  "actions": [
+    {
+      "id": "plan-good",
+      "snapshot": "inc-005-latest",
+      "node": "node-a",
+      "region": "cn-north",
+      "work_sets": ["ws-good-rename-readd"],
+      "read_groups": ["grp-drill-readers"]
+    },
+    {
+      "id": "plan-delete-marker",
+      "snapshot": "inc-005-latest",
+      "node": "node-a",
+      "region": "cn-north",
+      "work_sets": ["ws-delete-marker"]
+    },
+    {
+      "id": "plan-no-common-window",
+      "snapshot": "inc-005-latest",
+      "node": "node-a",
+      "region": "cn-north",
+      "work_sets": ["ws-no-common-window"]
+    },
+    {
+      "id": "plan-wrong-group",
+      "snapshot": "inc-005-latest",
+      "node": "node-a",
+      "region": "cn-north",
+      "work_sets": ["ws-wrong-group"],
+      "read_groups": ["grp-interns"]
+    },
+    {
+      "id": "plan-node-north",
+      "snapshot": "inc-005-latest",
+      "node": "node-dual",
+      "region": "cn-north",
+      "work_sets": ["ws-region"]
+    },
+    {
+      "id": "plan-node-south",
+      "snapshot": "inc-south-only-safe",
+      "node": "node-dual",
+      "region": "cn-south",
+      "work_sets": ["ws-region"]
+    },
+    {
+      "id": "plan-sealed-leak",
+      "snapshot": "inc-leaky-brings-sealed",
+      "node": "node-a",
+      "region": "cn-north",
+      "work_sets": ["ws-leak"]
+    }
+  ]
+}
